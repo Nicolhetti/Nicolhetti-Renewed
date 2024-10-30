@@ -4,37 +4,37 @@ export const navbarData = {
 
 export const footerData = {
   author: 'Redes',
-  aboutTheSite: '-----',
+  aboutTheSite: 'Página en construcción',
 }
 
 export const homePage = {
   title: 'Nicolhetti Projects',
-  description: 'Cada game es analizado archivo por archivo para asegurarse de ser los más seguros de Internet y no infectar a nuestros jugadores. Si el game está publicádo en la web, quiere decir que pasó los estandares de calidad y puede ser ejecutado con total seguridad.',
+  description: 'Cada juego es analizado archivo por archivo para asegurarse de ser los más seguros de Internet y no infectar a nuestros jugadores. Si el game está publicádo en la web, quiere decir que pasó los estandares de calidad y puede ser ejecutado con total seguridad.',
 }
 
 export const gamesPage = {
   title: 'Todos los Juegos',
-  description: '---',
+  description: 'Página en construcción',
 }
 
 export const categoryPage = {
   title: 'Categorías',
-  description: '---',
+  description: 'Página en construcción',
 }
 
 export const aboutPage = {
   title: 'Nicolhetti Projects',
-  description: '--',
-  aboutMe: '--',
+  description: 'Página en construcción',
+  aboutMe: 'Página en construcción',
 }
 
 export const seoData = {
-  description: 'Riyad, Software Engineer at AppsCode, with over 2.5+ years experience in software development.',
-  ogTitle: 'Riyad codes and helps others learn Javascript, Typescript, Vue, Nuxt, & Problem Solving',
-  twitterDescription: 'My game website, where I play around with Nuxt, Vue, and more and showcase my game, resources, etc',
-  image: 'https://res.cloudinary.com/dmecmyphj/image/upload/v1673548905/nuxt-game/cover_ntgs6u.webp',
+  description: 'null',
+  ogTitle: 'null',
+  twitterDescription: 'null',
+  image: 'null',
   mySite: 'https://nicolhetti-projects.com.ar',
-  twitterHandle: '@qdnvubp',
+  twitterHandle: 'null',
   mailAddress: 'nicolhetti_boss@nicolhetti-projects.com.ar',
 }
 

@@ -1,22 +1,22 @@
 import { Feed } from 'feed'
 import { serverQueryContent } from '#content/server'
 
-const basePath = 'https://nurriyad.xyz'
+const basePath = 'https://nicolhetti-projects.vercel.app/'
 
 export default defineEventHandler(async (event) => {
   setHeader(event, 'content-type', 'text/xml')
   const docs = await serverQueryContent(event).sort({ date: -1 }).find()
   const feed = new Feed({
-    title: 'Riyad\'s personal game site',
-    description: 'Riyad\'s personal game site',
+    title: 'Nicolhetti Projects',
+    description: 'Nicolhetti Projects',
     id: basePath,
     link: basePath,
-    language: 'en',
+    language: 'es',
     favicon: `${basePath}/favicon.ico`,
     copyright: 'MIT',
     author: {
-      name: 'Al Asad Nur Riyad',
-      email: 'asadnurriyad@gmail.com',
+      name: 'Nicolhetti',
+      email: 'nicolhetti_boss@nicolhetti-projects.com.ar',
       link: basePath,
     },
   })

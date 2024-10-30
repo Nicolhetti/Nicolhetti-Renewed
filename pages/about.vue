@@ -15,7 +15,7 @@ defineOgImageComponent('About', {
   headline: 'Saludos 👋',
   title: navbarData.homeTitle,
   description: 'Sumérgete en ésta web llena de juegos gratuitos y seguros.',
-  link: '/riyad.png',
+  link: '/logo.png',
 })
 </script>
 
@@ -39,7 +39,7 @@ defineOgImageComponent('About', {
                 <Icon name="fa:github" size="1em" />
               </NuxtLink>
               <NuxtLink
-                to="https://www.linkedin.com/in/nur-riyad/"
+                to="#"
                 target="_blank"
                 class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
                 aria-label="LinkedIn"
@@ -55,7 +55,7 @@ defineOgImageComponent('About', {
                 <Icon name="fa:twitter-square" size="1em" />
               </NuxtLink>
               <NuxtLink
-                to="https://stackoverflow.com/users/16781395/nur-riyad"
+                to="#"
                 target="_blank"
                 class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
                 aria-label="StackOverflow"
@@ -66,7 +66,7 @@ defineOgImageComponent('About', {
           </div>
           <div class="sm:hidden block col-span-3 pb-5 dark:text-[#F1F2F4]">
             <NuxtImg
-              src="/riyad.png"
+              src="/logo.png"
               width="125"
               height="115"
               quality="50"
@@ -82,7 +82,7 @@ defineOgImageComponent('About', {
       </div>
       <div class="hidden sm:block col-span-3">
         <NuxtImg
-          src="/riyad.png"
+          src="/logo.png"
           width="450"
           height="500"
           quality="50"

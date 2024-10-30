@@ -17,7 +17,7 @@ defineOgImageComponent('About', {
   headline: 'Saludos 👋',
   title: navbarData.homeTitle,
   description: 'Sumérgete en ésta web llena de juegos gratuitos y seguros.',
-  link: '/riyad.png',
+  link: '/logo.png',
 })
 </script>
 
