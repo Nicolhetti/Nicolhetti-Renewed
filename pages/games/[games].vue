@@ -79,7 +79,7 @@ useHead({
 
 // Generate OG Image
 defineOgImageComponent('Test', {
-  headline: 'Greetings 👋',
+  headline: 'Saludos 👋',
   title: data.value.title || '',
   description: data.value.description || '',
   link: data.value.ogImage,
@@ -119,7 +119,7 @@ defineOgImageComponent('Test', {
         :styled="true"
         :label="true"
         class="p-1"
-        aria-label="Share with {network}"
+        aria-label="Compartir con {network}"
       />
     </div>
   </div>

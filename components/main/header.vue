@@ -28,8 +28,8 @@ function onClick(val: string) {
             Categorías
           </NuxtLink>
         </li>
-        <li title="About Me">
-          <NuxtLink to="/about" aria-label="About me">
+        <li title="Sobre">
+          <NuxtLink to="/about" aria-label="Sobre">
             Sobre
           </NuxtLink>
         </li>
