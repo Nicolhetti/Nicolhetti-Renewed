@@ -72,7 +72,7 @@ const siteData = useSiteConfig()
 defineOgImage({
   props: {
     title: 'Juegos',
-    description: 'Here you will find all the game posts I have written & published on this site.',
+    description: 'Aquí encontrarás todas las publicaciones de juegos que he escrito y publicado en este sitio.',
     siteName: siteData.url,
   },
 })
@@ -109,7 +109,7 @@ defineOgImage({
 
         <ArchiveCard
           v-if="paginatedData.length <= 0"
-          title="No Post Found"
+          title="No se encontró ninguna publicación"
           image="/not-found.jpg"
         />
       </div>

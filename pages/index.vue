@@ -2,22 +2,22 @@
 import { navbarData } from '~/data'
 
 useHead({
-  title: 'Home',
+  title: 'Inicio',
   meta: [
     {
       name: 'description',
       content:
-        'Welcome To My game Site. Get Web Development, Javascript, Typescript, NodeJs, Vue, and Nuxt, Related Articles, Tips, Learning resources and more.',
+        'Bienvenido a mi sitio de juegos. Obtenga juegos gratuitos y seguros',
     },
   ],
 })
 
 // Generate OG Image
-defineOgImageComponent('About', {
-  headline: 'Greetings 👋',
+defineOgImageComponent('Sobre', {
+  headline: 'Saludos 👋',
   title: navbarData.homeTitle,
-  description: 'Dive into web development with me and learn Js, Ts, Vue, Nuxt, Docker, k8s',
-  link: '/riyad.jpg',
+  description: 'Sumérgete en ésta web llena de juegos gratuitos y seguros.',
+  link: '/riyad.png',
 })
 </script>
 

@@ -1,13 +1,16 @@
-// remember to fix this issue wint the tailwind/nuxt
-// https://github.com/tailwindlabs/tailwindcss-intellisense/issues/663#issuecomment-1316788128
-
 module.exports = {
   darkMode: 'class',
-  content: [],
+  content: [
+    './pages/**/*.{vue,js,ts}',
+    './components/**/*.{vue,js,ts}',
+    './layouts/**/*.{vue,js,ts}',
+    './plugins/**/*.{js,ts}',
+    './nuxt.config.{js,ts}',
+  ],
   theme: {
     extend: {
       fontFamily: {
-        spacegrotesk: ['Space Grotesk', 'sans-serif'],
+        poppins: ['Poppins', 'sans-serif'],
       },
     },
   },

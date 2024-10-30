@@ -2,7 +2,7 @@
 import { aboutPage, footerData, navbarData } from '~/data'
 
 useHead({
-  title: 'About',
+  title: 'Sobre',
   meta: [
     {
       name: 'description',
@@ -11,11 +11,11 @@ useHead({
   ],
 })
 
-defineOgImageComponent('About', {
-  headline: 'Greetings 👋',
+defineOgImageComponent('Sobre', {
+  headline: 'Saludos 👋',
   title: navbarData.homeTitle,
-  description: 'Dive into web development with me and learn Js, Ts, Vue, Nuxt, Docker, k8s',
-  link: '/riyad.jpg',
+  description: 'Sumérgete en ésta web llena de juegos gratuitos y seguros.',
+  link: '/riyad.png',
 })
 </script>
 
@@ -31,7 +31,7 @@ defineOgImageComponent('About', {
 
             <div class="my-3 space-x-2 md:space-x-3 pb-10">
               <NuxtLink
-                to="https://github.com/nurRiyad"
+                to="https://github.com/Nicolhetti"
                 target="_blank"
                 class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
                 aria-label="Github"
@@ -47,7 +47,7 @@ defineOgImageComponent('About', {
                 <Icon name="fa:linkedin-square" size="1em" />
               </NuxtLink>
               <NuxtLink
-                to="https://twitter.com/qdnvubp"
+                to="https://twitter.com/nicolhetti"
                 target="_blank"
                 class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
                 aria-label="Twitter"
@@ -66,7 +66,7 @@ defineOgImageComponent('About', {
           </div>
           <div class="sm:hidden block col-span-3 pb-5 dark:text-[#F1F2F4]">
             <NuxtImg
-              src="/riyad.jpg"
+              src="/riyad.png"
               width="125"
               height="115"
               quality="50"
@@ -82,7 +82,7 @@ defineOgImageComponent('About', {
       </div>
       <div class="hidden sm:block col-span-3">
         <NuxtImg
-          src="/riyad.jpg"
+          src="/riyad.png"
           width="450"
           height="500"
           quality="50"

@@ -3,7 +3,7 @@ import { siteMetaData } from './data'
 
 useHead({
   htmlAttrs: {
-    lang: 'en',
+    lang: 'es',
   },
   meta: () => siteMetaData,
 })
@@ -38,7 +38,10 @@ useHead({
   opacity: 0;
   filter: blur(1rem);
 }
-
+body {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+};
 html.dark{
   color-scheme: dark;
 }

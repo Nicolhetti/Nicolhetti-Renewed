@@ -104,7 +104,7 @@ defineOgImageComponent('Test', {
       >
         <ContentRenderer v-if="articles" :value="articles">
           <template #empty>
-            <p>No content found.</p>
+            <p>No se encontró contenido.</p>
           </template>
         </ContentRenderer>
       </div>
@@ -113,7 +113,7 @@ defineOgImageComponent('Test', {
 
     <div class="flex flex-row  flex-wrap md:flex-nowrap mt-10 gap-2">
       <SocialShare
-        v-for="network in ['facebook', 'twitter', 'discord', 'email']"
+        v-for="network in ['facebook', 'twitter', 'reddit', 'whatsapp', 'email']"
         :key="network"
         :network="network"
         :styled="true"
