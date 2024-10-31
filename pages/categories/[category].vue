@@ -39,7 +39,7 @@ useHead({
   meta: [
     {
       name: 'description',
-      content: `You will find all the ${category.value} related post here`,
+      content: `Encontrarás todas las publicaciones relacionadas con ${category.value} aquí`,
     },
   ],
 })
@@ -49,7 +49,7 @@ const siteData = useSiteConfig()
 defineOgImage({
   props: {
     title: category.value?.toUpperCase(),
-    description: `You will find all the ${category.value} related post here`,
+    description: `Encontrarás todas las publicaciones relacionadas con ${category.value} aquí`,
     siteName: siteData.url,
   },
 })
