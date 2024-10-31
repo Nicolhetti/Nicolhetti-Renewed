@@ -27,7 +27,7 @@ withDefaults(defineProps<Props>(), {
       :src="image || ''"
       :alt="alt || ''"
       width="600"
-      class="m-auto rounded-2xl shadow-lg h-32 md:h-72 w-4/6 md:w-4/5 content-center object-contain"
+      class="m-auto rounded-2xl shadow-lg max-w-[380px] content-center object-contain"
     />
     <p class="text-xs sm:text-sm my-3 max-w-xl mx-auto text-center text-zinc-600 dark:text-zinc-400">
       {{ description }}

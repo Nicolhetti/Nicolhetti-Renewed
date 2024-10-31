@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-const { data } = await useAsyncData('home', () => queryContent('/games').sort({ _id: -1 }).find())
+const { data } = await useAsyncData('home', () => queryContent('/games').sort({ _id: -1 }).find());
 
-const elementPerPage = ref(5)
-const pageNumber = ref(1)
-const searchTest = ref('')
+const elementPerPage = ref(5);
+const pageNumber = ref(1);
+const searchTest = ref('');
 
 const formattedData = computed(() => {
   return data.value?.map((articles) => {
@@ -17,46 +17,46 @@ const formattedData = computed(() => {
       date: articles.date || 'not-date-available',
       tags: articles.tags || [],
       published: articles.published || false,
-    }
-  }) || []
-})
+    };
+  }) || [];
+});
 
+// Computed property to filter data based on search input
 const searchData = computed(() => {
-  return formattedData.value.filter((data) => {
-    const lowerTitle = data.title.toLocaleLowerCase()
-    if (lowerTitle.search(searchTest.value) !== -1)
-      return true
-    else return false
-  }) || []
-})
+  const searchValue = searchTest.value.toLowerCase();
+  if (!searchValue) return formattedData.value; // Return all items if search is empty
+  return formattedData.value.filter((data) => data.title.toLowerCase().includes(searchValue));
+});
 
+// Computed property to handle pagination
 const paginatedData = computed(() => {
-  return searchData.value.filter((data, idx) => {
-    const startInd = ((pageNumber.value - 1) * elementPerPage.value)
-    const endInd = (pageNumber.value * elementPerPage.value) - 1
+  const startInd = (pageNumber.value - 1) * elementPerPage.value;
+  const endInd = pageNumber.value * elementPerPage.value;
+  return searchData.value.filter((_, idx) => idx >= startInd && idx < endInd);
+});
 
-    if (idx >= startInd && idx <= endInd)
-      return true
-    else return false
-  }) || []
-})
+// Watch to reset page number when search input changes
+watch(searchTest, () => {
+  pageNumber.value = 1;
+});
 
+// Function to go to the previous page
 function onPreviousPageClick() {
-  if (pageNumber.value > 1)
-    pageNumber.value -= 1
+  if (pageNumber.value > 1) pageNumber.value -= 1;
 }
 
+// Total pages based on filtered search data
 const totalPage = computed(() => {
-  const ttlContent = searchData.value.length || 0
-  const totalPage = Math.ceil(ttlContent / elementPerPage.value)
-  return totalPage
-})
+  const ttlContent = searchData.value.length || 0;
+  return Math.ceil(ttlContent / elementPerPage.value);
+});
 
+// Function to go to the next page
 function onNextPageClick() {
-  if (pageNumber.value < totalPage.value)
-    pageNumber.value += 1
+  if (pageNumber.value < totalPage.value) pageNumber.value += 1;
 }
 
+// Set the page metadata
 useHead({
   title: 'Juegos',
   meta: [
@@ -65,17 +65,17 @@ useHead({
       content: 'Here you will find all the game posts I have written & published on this site.',
     },
   ],
-})
+});
 
 // Generate OG Image
-const siteData = useSiteConfig()
+const siteData = useSiteConfig();
 defineOgImage({
   props: {
     title: 'Juegos',
     description: 'Aquí encontrarás todas las publicaciones de juegos que he escrito y publicado en este sitio.',
     siteName: siteData.url,
   },
-})
+});
 </script>
 
 <template>
