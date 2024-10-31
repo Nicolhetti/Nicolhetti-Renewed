@@ -39,7 +39,6 @@ useHead({
   filter: blur(1rem);
 }
 body {
-  text-align: center;
   font-family: 'Poppins', sans-serif;
 };
 html.dark{
