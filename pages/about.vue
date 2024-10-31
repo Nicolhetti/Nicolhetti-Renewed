@@ -78,7 +78,7 @@ defineOgImageComponent('About', {
           {{ aboutPage.description }}
         </h3>
 
-        <p>{{ aboutPage.aboutMe }}</p>
+        <div v-html="aboutPage.aboutMe" class="text-base sm:text-lg"></div>
       </div>
       <div class="hidden sm:block col-span-3">
         <NuxtImg
