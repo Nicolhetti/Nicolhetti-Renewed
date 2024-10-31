@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { makeFirstCharUpper } from '@/utils/helper'
 
-const { data } = await useAsyncData('all-blog-post-for-category', () => queryContent('/games').sort({ _id: -1 }).find())
+const { data } = await useAsyncData('all-game-post-for-category', () => queryContent('/games').sort({ _id: -1 }).find())
 
 const allTags = new Map()
 

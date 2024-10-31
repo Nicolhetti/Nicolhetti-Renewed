@@ -4,7 +4,7 @@ export const navbarData = {
 
 export const footerData = {
   author: 'Redes',
-  aboutTheSite: 'Página en construcción',
+  aboutTheSite: 'Aún nada :/',
 }
 
 export const homePage = {
@@ -14,27 +14,33 @@ export const homePage = {
 
 export const gamesPage = {
   title: 'Todos los Juegos',
-  description: 'Página en construcción',
+  description: 'Aquí encontrarás todos los juegos publicados actualmente',
 }
 
 export const categoryPage = {
   title: 'Categorías',
-  description: 'Página en construcción',
+  description: 'Aquí encontrarás todas las categorías disponibles',
 }
 
 export const aboutPage = {
   title: 'Nicolhetti Projects',
-  description: 'Página en construcción',
-  aboutMe: 'Página en construcción',
+  description: '¡Bienvenidos a Nicolhetti Projects! Aquí encontrarás juegos analizados para tu seguridad.',
+  aboutMe: `Soy un apasionado gamer de Argentina, y como muchos de ustedes, he enfrentado las dificultades de una economía complicada. Desde siempre, el acceso a juegos de calidad ha sido un desafío, lo que me llevó a buscar alternativas en sitios de dudosa reputación. Sin embargo, esta búsqueda a menudo terminaba en frustración: la mayoría de esos juegos estaban infestados de malware, lo que me hizo cuestionar la seguridad de lo que estaba descargando.
+
+Fue en ese momento de frustración que decidí dar un paso adelante. Así nació Nicolhetti Projects, un espacio donde mi misión es compartir juegos que he analizado meticulosamente, archivo por archivo, para asegurarme de que sean los más seguros de internet. Cada juego que ofrezco ha pasado por un riguroso proceso de verificación. Si encuentro algún archivo infectado, hago todo lo posible para limpiarlo. Si no puedo eliminar las detecciones, simplemente descarto el juego y busco otra fuente.
+
+Todo esto lleva mucho tiempo y dedicación, ya que soy una sola persona comprometida con brindarles la mejor experiencia posible. Mi objetivo es que puedan disfrutar de los juegos sin preocupaciones, sabiendo que han sido revisados para su seguridad. Espero que valoren el esfuerzo que pongo en cada descarga y que juntos podamos construir una comunidad más segura para todos los gamers.
+
+¡Gracias por formar parte de esta aventura!`,
 }
 
 export const seoData = {
-  description: 'null',
-  ogTitle: 'null',
-  twitterDescription: 'null',
-  image: 'null',
-  mySite: 'https://nicolhetti-projects.com.ar',
-  twitterHandle: 'null',
+  description: 'Aquí encontrarás juegos analizados para tu seguridad.',
+  ogTitle: '¡Bienvenidos a Nicolhetti Projects!',
+  twitterDescription: 'Aquí encontrarás juegos analizados para tu seguridad.',
+  image: 'https://i.imgur.com/iNJsP0E.png',
+  mySite: 'https://nicolhetti-projects.vercel.app/',
+  twitterHandle: '@nicolhetti',
   mailAddress: 'nicolhetti_boss@nicolhetti-projects.com.ar',
 }
 
