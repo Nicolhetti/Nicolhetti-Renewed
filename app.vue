@@ -3,7 +3,7 @@ import { siteMetaData } from './data'
 
 useHead({
   htmlAttrs: {
-    lang: 'es',
+    lang: 'en',
   },
   meta: () => siteMetaData,
 })

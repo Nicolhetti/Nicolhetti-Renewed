@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-const { data } = await useAsyncData('home', () => queryContent('/games').sort({ _id: -1 }).find());
+const { data } = await useAsyncData('home', () => queryContent('/games').sort({ _id: -1 }).find())
 
-const elementPerPage = ref(5);
-const pageNumber = ref(1);
-const searchTest = ref('');
+const elementPerPage = ref(5)
+const pageNumber = ref(1)
+const searchTest = ref('')
 
 const formattedData = computed(() => {
   return data.value?.map((articles) => {
@@ -17,65 +17,65 @@ const formattedData = computed(() => {
       date: articles.date || 'not-date-available',
       tags: articles.tags || [],
       published: articles.published || false,
-    };
-  }) || [];
-});
+    }
+  }) || []
+})
 
-// Computed property to filter data based on search input
 const searchData = computed(() => {
-  const searchValue = searchTest.value.toLowerCase();
-  if (!searchValue) return formattedData.value; // Return all items if search is empty
-  return formattedData.value.filter((data) => data.title.toLowerCase().includes(searchValue));
-});
+  return formattedData.value.filter((data) => {
+    const lowerTitle = data.title.toLocaleLowerCase()
+    if (lowerTitle.search(searchTest.value) !== -1)
+      return true
+    else return false
+  }) || []
+})
 
-// Computed property to handle pagination
 const paginatedData = computed(() => {
-  const startInd = (pageNumber.value - 1) * elementPerPage.value;
-  const endInd = pageNumber.value * elementPerPage.value;
-  return searchData.value.filter((_, idx) => idx >= startInd && idx < endInd);
-});
+  return searchData.value.filter((data, idx) => {
+    const startInd = ((pageNumber.value - 1) * elementPerPage.value)
+    const endInd = (pageNumber.value * elementPerPage.value) - 1
 
-// Watch to reset page number when search input changes
-watch(searchTest, () => {
-  pageNumber.value = 1;
-});
+    if (idx >= startInd && idx <= endInd)
+      return true
+    else return false
+  }) || []
+})
 
-// Function to go to the previous page
 function onPreviousPageClick() {
-  if (pageNumber.value > 1) pageNumber.value -= 1;
+  if (pageNumber.value > 1)
+    pageNumber.value -= 1
 }
 
-// Total pages based on filtered search data
 const totalPage = computed(() => {
-  const ttlContent = searchData.value.length || 0;
-  return Math.ceil(ttlContent / elementPerPage.value);
-});
+  const ttlContent = searchData.value.length || 0
+  const totalPage = Math.ceil(ttlContent / elementPerPage.value)
+  return totalPage
+})
 
-// Function to go to the next page
 function onNextPageClick() {
-  if (pageNumber.value < totalPage.value) pageNumber.value += 1;
+  if (pageNumber.value < totalPage.value)
+    pageNumber.value += 1
 }
 
-// Set the page metadata
 useHead({
-  title: 'Juegos',
+  title: 'Archivo',
   meta: [
     {
       name: 'description',
-      content: 'Here you will find all the game posts I have written & published on this site.',
+      content: 'Aquí encontrarás todas las publicaciones de juegos que hay actualmente en la web.',
     },
   ],
-});
+})
 
 // Generate OG Image
-const siteData = useSiteConfig();
+const siteData = useSiteConfig()
 defineOgImage({
   props: {
-    title: 'Juegos',
-    description: 'Aquí encontrarás todas las publicaciones de juegos que he escrito y publicado en este sitio.',
+    title: 'Archivo',
+    description: 'Aquí encontrarás todas las publicaciones de juegos que hay actualmente en la web.',
     siteName: siteData.url,
   },
-});
+})
 </script>
 
 <template>
@@ -91,35 +91,27 @@ defineOgImage({
       >
     </div>
 
-    <ClientOnly>
-      <div v-auto-animate class="space-y-5 my-5 px-4">
-        <template v-for="post in paginatedData" :key="post.title">
-          <ArchiveCard
-            :path="post.path"
-            :title="post.title"
-            :date="post.date"
-            :description="post.description"
-            :image="post.image"
-            :alt="post.alt"
-            :og-image="post.ogImage"
-            :tags="post.tags"
-            :published="post.published"
-          />
-        </template>
-
+    <div v-auto-animate class="space-y-5 my-5 px-4">
+      <template v-for="post in paginatedData" :key="post.title">
         <ArchiveCard
-          v-if="paginatedData.length <= 0"
-          title="No se encontró ninguna publicación"
-          image="/not-found.jpg"
+          :path="post.path"
+          :title="post.title"
+          :date="post.date"
+          :description="post.description"
+          :image="post.image"
+          :alt="post.alt"
+          :og-image="post.ogImage"
+          :tags="post.tags"
+          :published="post.published"
         />
-      </div>
-
-      <template #fallback>
-        <!-- this will be rendered on server side -->
-        <gameLoader />
-        <gameLoader />
       </template>
-    </ClientOnly>
+
+      <ArchiveCard
+        v-if="paginatedData.length <= 0"
+        title="No se encontró ninguna publicación"
+        image="/not-found.jpg"
+      />
+    </div>
 
     <div class="flex justify-center items-center space-x-6 ">
       <button :disabled="pageNumber <= 1" @click="onPreviousPageClick">

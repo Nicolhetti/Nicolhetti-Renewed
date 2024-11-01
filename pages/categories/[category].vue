@@ -24,9 +24,9 @@ const formattedData = computed(() => {
       path: articles._path,
       title: articles.title || 'no-title available',
       description: articles.description || 'no-description available',
-      image: articles.image || '/game-img/game.jpg',
+      image: articles.image || '/blogs-img/blog.jpg',
       alt: articles.alt || 'no alter data available',
-      ogImage: articles.ogImage || '/game-img/game.jpg',
+      ogImage: articles.ogImage || '/blogs-img/blog.jpg',
       date: articles.date || 'not-date-available',
       tags: articles.tags || [],
       published: articles.published || false,
@@ -59,7 +59,7 @@ defineOgImage({
   <main class="container max-w-5xl mx-auto text-zinc-600 px-4">
     <CategoryTopic />
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-      <gameCard
+      <BlogCard
         v-for="post in formattedData"
         :key="post.title"
         :path="post.path"
@@ -72,7 +72,7 @@ defineOgImage({
         :tags="post.tags"
         :published="post.published"
       />
-      <gameEmpty v-if="data?.length === 0" />
+      <BlogEmpty v-if="data?.length === 0" />
     </div>
   </main>
 </template>

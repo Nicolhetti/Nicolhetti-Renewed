@@ -1,7 +1,7 @@
 import { Feed } from 'feed'
 import { serverQueryContent } from '#content/server'
 
-const basePath = 'https://nicolhetti-projects.vercel.app/'
+const basePath = 'https://nicolhetti-projects.versel.app'
 
 export default defineEventHandler(async (event) => {
   setHeader(event, 'content-type', 'text/xml')
@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
     description: 'Nicolhetti Projects',
     id: basePath,
     link: basePath,
-    language: 'es',
+    language: 'en',
     favicon: `${basePath}/favicon.ico`,
     copyright: 'MIT',
     author: {

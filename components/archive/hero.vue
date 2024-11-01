@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { gamesPage } from '~/data'
+import { blogsPage } from '~/data'
 </script>
 
 <template>
@@ -7,14 +7,14 @@ import { gamesPage } from '~/data'
     <div class="grid grid-cols-1 sm:grid-cols-2 items-center">
       <div class="px-6">
         <h1 class="text-black dark:text-zinc-300 font-semibold leading-tight text-4xl md:text-5xl my-5">
-          {{ gamesPage.title }}
+          {{ blogsPage.title }}
         </h1>
         <p class="dark:text-zinc-300">
-          {{ gamesPage.description }}
+          {{ blogsPage.description }}
         </p>
       </div>
       <div class="px-6 justify-self-center">
-        <LogoDogpow />
+        <LogoDog />
       </div>
     </div>
   </div>

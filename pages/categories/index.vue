@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import { makeFirstCharUpper } from '@/utils/helper'
 
-const { data } = await useAsyncData('all-game-post-for-category', () => queryContent('/games').sort({ _id: -1 }).find())
+const { data } = await useAsyncData('all-blog-post-for-category', () => queryContent('/games').sort({ _id: -1 }).find())
 
 const allTags = new Map()
 
-data.value?.forEach((game) => {
-  const tags: Array<string> = game.tags || []
+data.value?.forEach((blog) => {
+  const tags: Array<string> = blog.tags || []
   tags.forEach((tag) => {
     if (allTags.has(tag)) {
       const cnt = allTags.get(tag)
@@ -24,7 +24,7 @@ useHead({
     {
       name: 'description',
       content:
-        'A continuación se enumeran todos los temas de los juegos.',
+        'Aquí encontrarás todas las categorías de los juegos.',
     },
   ],
 })
@@ -34,7 +34,7 @@ const siteData = useSiteConfig()
 defineOgImage({
   props: {
     title: 'Categorías',
-    description: 'A continuación se enumeran todos los temas de los juegos.',
+    description: 'Aquí encontrarás todas las categorías de los juegos.',
     siteName: siteData.url,
   },
 })

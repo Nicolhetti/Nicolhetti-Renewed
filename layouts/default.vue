@@ -1,5 +1,5 @@
 <template>
-  <div class="gd-container font-poppins">
+  <div class="gd-container font-spacegrotesk">
     <header class="fixed w-full bg-[#F1F2F4] dark:bg-slate-950 z-10">
       <MainHeader />
     </header>

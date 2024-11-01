@@ -16,9 +16,9 @@ withDefaults(defineProps<Props>(), {
   title: 'no-title',
   date: 'no-date',
   description: 'no-description',
-  image: '/game-img/game.jpg',
+  image: '/blogs-img/blog.jpg',
   alt: 'no-alt',
-  ogImage: '/game-img/game.jpg',
+  ogImage: '/blogs-img/blog.jpg',
   tags: () => [],
   published: false,
 })

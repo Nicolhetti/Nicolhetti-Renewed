@@ -7,7 +7,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Bienvenido a mi sitio de juegos. Obtenga juegos gratuitos y seguros',
+        'Bienvenido a mi sitio de juegos. Obtenga juegos gratuitos y seguros.',
     },
   ],
 })

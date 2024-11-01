@@ -15,8 +15,7 @@ const path = computed(() => route.fullPath.replace('/', ''))
       </div>
 
       <div class="border-t dark:border-gray-800 mt-5 text-center p-2">
-        &copy; 2024 Nicolhetti Projects. Todos los derechos reservados.
-        <a href="/rss.xml"> <span class="px-3"><Icon name="bi:rss-fill" /></span></a>
+        &copy; 2024 Nicolhetti Projects. Todos los derechos reservados.<a href="/rss.xml"> <span class="px-3"><Icon name="bi:rss-fill" /></span></a>
       </div>
     </div>
   </div>

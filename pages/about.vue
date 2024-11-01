@@ -14,7 +14,7 @@ useHead({
 defineOgImageComponent('About', {
   headline: 'Saludos 👋',
   title: navbarData.homeTitle,
-  description: 'Sumérgete en ésta web llena de juegos gratuitos y seguros.',
+  description: 'DivSumérgete en ésta web llena de juegos gratuitos y seguros.',
   link: '/logo.png',
 })
 </script>
@@ -31,20 +31,20 @@ defineOgImageComponent('About', {
 
             <div class="my-3 space-x-2 md:space-x-3 pb-10">
               <NuxtLink
-                to="https://github.com/Nicolhetti"
+                to="hhttps://github.com/Nicolhetti"
                 target="_blank"
                 class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
                 aria-label="Github"
               >
-                <Icon name="fa:github" size="1em" />
+                <Icon name="iconoir:github" size="1em" />
               </NuxtLink>
               <NuxtLink
-                to="#"
+                to="https://discord.gg/xvPPbe2AWZ"
                 target="_blank"
                 class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
-                aria-label="LinkedIn"
+                aria-label="Discord"
               >
-                <Icon name="fa:linkedin-square" size="1em" />
+                <Icon name="iconoir:discord" size="1em" />
               </NuxtLink>
               <NuxtLink
                 to="https://twitter.com/nicolhetti"
@@ -52,15 +52,15 @@ defineOgImageComponent('About', {
                 class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
                 aria-label="Twitter"
               >
-                <Icon name="fa:twitter-square" size="1em" />
+                <Icon name="iconoir:twitter" size="1em" />
               </NuxtLink>
               <NuxtLink
-                to="#"
+                to="https://instagram.com/nico.nctt"
                 target="_blank"
                 class="px-2 py-1 lg:px-3 lg:py-2 bg-gray-300 text-gray-800 rounded-md dark:bg-slate-700 dark:text-[#F1F2F4]"
-                aria-label="StackOverflow"
+                aria-label="Instagram"
               >
-                <Icon name="fa:stack-overflow" size="1em" />
+                <Icon name="iconoir:instagram" size="1em" />
               </NuxtLink>
             </div>
           </div>

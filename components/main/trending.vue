@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-// Get Last 6 Publish Post from the content/games directory
+// Get Last 6 Publish Post from the content/blog directory
 const { data } = await useAsyncData('trending-post', () =>
   queryContent('/games').limit(3).sort({ _id: 1 }).find(),
 )
@@ -26,7 +26,7 @@ useHead({
     {
       name: 'description',
       content:
-        'Welcome To My game Site. Get Web Development, Javascript, Typescript, NodeJs, Vue, and Nuxt, Related Articles, Tips, Learning resources and more.',
+        'Bienvenido a mi sitio de juegos. Obtenga juegos gratuitos y seguros.',
     },
   ],
 })
@@ -55,7 +55,7 @@ useHead({
         />
       </template>
       <template v-if="data?.length === 0">
-        <gameEmpty />
+        <BlogEmpty />
       </template>
     </div>
   </div>
