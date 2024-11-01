@@ -119,7 +119,7 @@ defineOgImageComponent('Test', {
         :styled="true"
         :label="true"
         class="p-1"
-        aria-label="Share with {network}"
+        aria-label="Compartir con {network}"
       />
     </div>
   </div>
