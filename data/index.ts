@@ -35,7 +35,9 @@ export const aboutPage = {
   Todo esto lleva mucho tiempo y dedicación, ya que soy una sola persona comprometida con brindarles la mejor experiencia posible.<br><br>
   Mi objetivo es que puedan disfrutar de los juegos sin preocupaciones, sabiendo que han sido revisados para su seguridad.<br><br>
   Espero que valoren el esfuerzo que pongo en cada descarga y que juntos podamos construir una comunidad más segura para todos los gamers.<br><br>
-  ¡Gracias por formar parte de esta aventura!`,
+  ¡Gracias por formar parte de esta aventura!
+  
+  Y muchas gracias a <a href="https://github.com/goodendinggg"> <span class="px-3">goodendinggg</span></a> por la ayuda con la web 👌`,
 }
 
 export const seoData = {
