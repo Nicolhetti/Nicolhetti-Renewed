@@ -14,7 +14,7 @@ useHead({
 defineOgImageComponent('About', {
   headline: 'Saludos 👋',
   title: navbarData.homeTitle,
-  description: 'DivSumérgete en ésta web llena de juegos gratuitos y seguros.',
+  description: 'Sumérgete en ésta web llena de juegos gratuitos y seguros.',
   link: '/logo.png',
 })
 </script>
