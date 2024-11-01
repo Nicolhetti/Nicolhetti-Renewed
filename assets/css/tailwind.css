@@ -3,3 +3,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes shine {
+    0% {
+      text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.8), 0px 0px 10px rgba(255, 215, 0, 0.6);
+    }
+    50% {
+      text-shadow: 0px 0px 10px rgba(255, 215, 0, 1), 0px 0px 20px rgba(255, 215, 0, 0.9);
+    }
+    100% {
+      text-shadow: 0px 0px 5px rgba(255, 215, 0, 0.8), 0px 0px 10px rgba(255, 215, 0, 0.6);
+    }
+  }
+  
+  .animate-shine {
+    animation: shine 2s infinite;
+  }
+  
