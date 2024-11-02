@@ -30,7 +30,7 @@ withDefaults(defineProps<Props>(), {
       <div class="sm:col-span-3">
         <NuxtImg
           class="image-fixed-height"
-          width="300"
+          width="400" height="300"
           :src="image"
           :alt="alt"
         />
