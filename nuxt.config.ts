@@ -60,6 +60,11 @@ export default defineNuxtConfig({
     '@stefanobartoletti/nuxt-social-share',
   ],
 
+  image: {
+    provider: 'vercel',
+    domains: ['nicolhetti-projects.vercel.app'],
+  },
+  
   content: {
     highlight: {
       theme: 'tokyo-night',
