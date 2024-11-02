@@ -11,7 +11,7 @@ export default defineEventHandler(async (event) => {
     description: 'Nicolhetti Projects',
     id: basePath,
     link: basePath,
-    language: 'en',
+    language: 'es',
     favicon: `${basePath}/favicon.ico`,
     copyright: 'MIT',
     author: {

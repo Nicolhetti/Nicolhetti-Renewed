@@ -36,7 +36,7 @@ export const aboutPage = {
   Mi objetivo es que puedan disfrutar de los juegos sin preocupaciones, sabiendo que han sido revisados para su seguridad.<br><br>
   Espero que valoren el esfuerzo que pongo en cada descarga y que juntos podamos construir una comunidad más segura para todos los gamers.<br><br>
   ¡Gracias por formar parte de esta aventura!<br><br>  
-  Y muchas gracias a <a href="https://github.com/goodendinggg" class="text-yellow-400 font-bold transition duration-300"><span class="px-3 animate-shine">goodendinggg</span></a> por la ayuda con la web 👌`,
+  Y muchas gracias a <a href="https://github.com/goodendinggg" class="font-bold transition duration-300"><span class="px-3 animate-shine">goodendinggg</span></a> por la ayuda con la web 👌`,
 }
 
 export const seoData = {
