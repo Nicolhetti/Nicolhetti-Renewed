@@ -11,7 +11,7 @@ export const footerData = {
 
 export const homePage = {
   title: 'Nicolhetti Projects',
-  description: 'Cada juego es analizado archivo por archivo para asegurarse de ser los más seguros de Internet y no infectar a nuestros jugadores. Si el game está publicádo en la web, quiere decir que pasó los estandares de calidad y puede ser ejecutado con total seguridad.',
+  description: 'Cada juego es analizado archivo por archivo para asegurarse de ser los más seguros de Internet y no infectar a nuestros jugadores. Si el juego está publicádo en la web, quiere decir que pasó los estandares de calidad y puede ser ejecutado con total seguridad.',
 }
 
 export const blogsPage = {
