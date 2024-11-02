@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { data } = await useAsyncData('home', () => queryContent('/games').sort({ _id: -1 }).find())
 
-const elementPerPage = ref(5)
+const elementPerPage = ref(8)
 const pageNumber = ref(1)
 const searchTest = ref('')
 
