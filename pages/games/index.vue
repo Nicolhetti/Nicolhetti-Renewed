@@ -79,7 +79,7 @@ defineOgImage({
 </script>
 
 <template>
-  <main class="container max-w-5xl mx-auto text-zinc-600">
+  <main class="container max-w-8xl mx-auto text-zinc-600">
     <ArchiveHero />
 
     <div class="px-6">
@@ -91,7 +91,7 @@ defineOgImage({
       >
     </div>
 
-    <div v-auto-animate class="space-y-5 my-5 px-4">
+    <div v-auto-animate class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-6 my-5 px-4">
       <template v-for="post in paginatedData" :key="post.title">
         <ArchiveCard
           :path="post.path"
