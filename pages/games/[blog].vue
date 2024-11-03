@@ -138,7 +138,7 @@ onMounted(() => {
       <div id="disqus_thread" class="mt-10"></div>
     </div>
     <BlogToc />
-
+    <ScrollToTop />
     <div class="flex flex-row flex-wrap md:flex-nowrap mt-10 gap-2">
       <SocialShare
         v-for="network in ['facebook', 'twitter', 'reddit', 'whatsapp', 'email']"

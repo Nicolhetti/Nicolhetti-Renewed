@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { data } = await useAsyncData('home', () => queryContent('/games').sort({ _id: -1 }).find())
 
-const elementPerPage = ref(8)
+const elementPerPage = ref(14)
 const pageNumber = ref(1)
 const searchTest = ref('')
 
@@ -112,7 +112,7 @@ defineOgImage({
         image="/not-found.jpg"
       />
     </div>
-
+    <ScrollToTop />
     <div class="flex justify-center items-center space-x-6 ">
       <button :disabled="pageNumber <= 1" @click="onPreviousPageClick">
         <Icon name="mdi:code-less-than" size="30" :class="{ 'text-sky-700 dark:text-sky-400': pageNumber > 1 }" />
