@@ -58,7 +58,12 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@formkit/auto-animate',
     '@stefanobartoletti/nuxt-social-share',
+    'nuxt-disqus',
   ],
+
+  disqus: {
+    shortname: "nicolhetti-projects",
+  },
 
   content: {
     highlight: {

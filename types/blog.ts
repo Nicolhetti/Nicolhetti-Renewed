@@ -8,3 +8,9 @@ export interface BlogPost {
   tags: string[]
   published: boolean
 }
+
+declare global {
+  interface Window {
+    DISQUS?: any;
+  }
+}

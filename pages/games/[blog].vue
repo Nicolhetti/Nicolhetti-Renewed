@@ -85,6 +85,30 @@ defineOgImageComponent('Test', {
   link: data.value.ogImage,
 
 })
+
+import { onMounted } from 'vue'
+
+const disqusShortname = 'nicolhetti-projects';
+
+onMounted(() => {
+  if (window.DISQUS) {
+    // Si Disqus ya está cargado, solo actualiza
+    window.DISQUS.reset({
+      reload: true,
+      config: function () {
+        this.page.url = window.location.href;
+        this.page.identifier = window.location.pathname;
+      },
+    });
+  } else {
+    // Si Disqus no está cargado, añade el script
+    const d = document, s = d.createElement('script');
+    s.src = `https://${disqusShortname}.disqus.com/embed.js`;
+    s.setAttribute('data-timestamp', (+new Date()).toString());
+    (d.head || d.body).appendChild(s);
+  }
+});
+
 </script>
 
 <template>
@@ -108,10 +132,14 @@ defineOgImageComponent('Test', {
           </template>
         </ContentRenderer>
       </div>
+
+
+      <!-- Agrega Disqus acá -->
+      <div id="disqus_thread" class="mt-10"></div>
     </div>
     <BlogToc />
 
-    <div class="flex flex-row  flex-wrap md:flex-nowrap mt-10 gap-2">
+    <div class="flex flex-row flex-wrap md:flex-nowrap mt-10 gap-2">
       <SocialShare
         v-for="network in ['facebook', 'twitter', 'reddit', 'whatsapp', 'email']"
         :key="network"

@@ -30,6 +30,7 @@
     "eslint": "^8.39.0",
     "feed": "^4.2.2",
     "nuxt": "^3.13.2",
+    "nuxt-disqus": "^1.1.1",
     "nuxt-icon": "^0.6.8",
     "nuxt-og-image": "^3.0.0-rc.38",
     "typescript": "^5.3.3"
