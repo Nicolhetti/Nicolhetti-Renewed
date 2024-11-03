@@ -1,0 +1,21 @@
+/* Estilos generales del scrollbar */
+::-webkit-scrollbar {
+    width: 8px; /* Ancho del scrollbar */
+  }
+  
+  /* Track del scrollbar */
+  ::-webkit-scrollbar-track {
+    background: #020617; /* Color de fondo del track */
+  }
+  
+  /* Thumb del scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background: #38bdf8; /* Color de fondo del thumb */
+    border-radius: 4px; /* Bordes redondeados */
+  }
+  
+  /* Hover del thumb */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #0f172a; /* Color de fondo al pasar el mouse */
+  }
+  
