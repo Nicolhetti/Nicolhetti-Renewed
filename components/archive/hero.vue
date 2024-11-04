@@ -3,7 +3,7 @@ import { blogsPage } from '~/data'
 </script>
 
 <template>
-  <div class="container mx-auto mb-5">
+  <div class="container mx-auto mt-8 mb-8">
     <div class="grid grid-cols-1 sm:grid-cols-2 items-center">
       <div class="px-6">
         <h1 class="text-black dark:text-zinc-300 font-semibold leading-tight text-4xl md:text-5xl my-5">
@@ -13,7 +13,7 @@ import { blogsPage } from '~/data'
           {{ blogsPage.description }}
         </p>
       </div>
-      <div class="px-6 justify-self-center">
+      <div class="lg:pl-[464px] sm:px-auto justify-self-center">
         <LogoDog />
       </div>
     </div>

@@ -3,7 +3,7 @@ import { categoryPage } from '~/data'
 </script>
 
 <template>
-  <div class="container mx-auto">
+  <div class="container mt-8 mb-8">
     <div class="grid grid-cols-1 sm:grid-cols-2 items-center">
       <div class="px-6">
         <h1 class="text-black dark:text-zinc-300 font-semibold leading-tight text-4xl md:text-5xl my-5">
@@ -13,7 +13,7 @@ import { categoryPage } from '~/data'
           {{ categoryPage.description }}
         </p>
       </div>
-      <div class="px-6 justify-self-center">
+      <div class="lg:pl-52 sm:px-auto justify-self-center">
         <LogoDog />
       </div>
     </div>

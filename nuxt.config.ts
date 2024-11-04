@@ -74,7 +74,6 @@ export default defineNuxtConfig({
   css: [
     '@/assets/css/scrollbar.css'
   ],
-  
 
   compatibilityDate: '2024-09-30',
 })
