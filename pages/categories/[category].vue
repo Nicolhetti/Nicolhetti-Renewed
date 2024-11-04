@@ -30,6 +30,7 @@ const formattedData = computed(() => {
       date: articles.date || 'not-date-available',
       tags: articles.tags || [],
       published: articles.published || false,
+      update: articles.update || 'no-update',
     }
   })
 })
@@ -71,6 +72,7 @@ defineOgImage({
         :og-image="post.ogImage"
         :tags="post.tags"
         :published="post.published"
+        :update="post.update"
       />
       <BlogEmpty v-if="data?.length === 0" />
     </div>

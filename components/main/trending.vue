@@ -16,6 +16,7 @@ const formattedData = computed(() => {
       date: articles.date || 'not-date-available',
       tags: articles.tags || [],
       published: articles.published || false,
+      update: articles.update || 'no-update',
     }
   })
 })
@@ -52,6 +53,7 @@ useHead({
           :og-image="post.ogImage"
           :tags="post.tags"
           :published="post.published"
+          :update="post.update"
         />
       </template>
       <template v-if="data?.length === 0">

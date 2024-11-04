@@ -7,6 +7,7 @@ export interface BlogPost {
   ogImage: string
   tags: string[]
   published: boolean
+  update: string
 }
 
 declare global {
