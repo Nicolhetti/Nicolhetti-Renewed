@@ -22,6 +22,7 @@ export default defineNuxtConfig({
     identity: {
       type: 'Person',
     },
+    name: 'Nicolhetti Projects',
     twitter: seoData.twitterHandle,
   },
 
