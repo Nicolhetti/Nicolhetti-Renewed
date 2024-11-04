@@ -13,7 +13,7 @@ import { blogsPage } from '~/data'
           {{ blogsPage.description }}
         </p>
       </div>
-      <div class="lg:pl-[464px] sm:px-auto justify-self-center">
+      <div class="sm:px-auto md:pl-[80px] lg:pl-[208px] xl:pl-[336px] 2xl:pl-[464px] justify-self-center">
         <LogoDog />
       </div>
     </div>
