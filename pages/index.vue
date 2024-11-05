@@ -14,7 +14,7 @@ useHead({
 
 // Generate OG Image
 defineOgImageComponent('About', {
-  headline: 'Saludos 👋 🇦🇷',
+  headline: 'Saludos 👋',
   title: navbarData.homeTitle,
   description: 'Sumérgete en ésta web llena de juegos gratuitos y seguros.',
   link: '/logo.png',
