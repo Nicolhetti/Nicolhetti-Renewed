@@ -71,7 +71,7 @@ const formattedLink = computed(() => {
     </div>
 
     <div v-if="formattedLink" class="absolute top-[200px] right-[70px]">
-      <img :src="formattedLink" :alt="title" class="w-52 h-96 rounded-lg object-cover">
+      <img :src="formattedLink" :alt="title" class="h-96 w-full rounded-lg object-cover">
     </div>
   </div>
 </template>
