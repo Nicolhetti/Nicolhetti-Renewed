@@ -44,7 +44,7 @@ export const seoData = {
   ogTitle: '¡Bienvenidos a Nicolhetti Projects!',
   twitterDescription: 'Aquí encontrarás juegos analizados para tu seguridad.',
   image: 'https://i.imgur.com/iNJsP0E.png',
-  mySite: 'https://nicolhetti-projects.vercel.app/',
+  mySite: 'https://www.nicolhetti-projects.com.ar/',
   twitterHandle: '@nicolhetti',
   mailAddress: 'nicolhetti_boss@nicolhetti-projects.com.ar',
 }
