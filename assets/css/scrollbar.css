@@ -5,17 +5,17 @@
   
   /* Track del scrollbar */
   ::-webkit-scrollbar-track {
-    background: #020617; /* Color de fondo del track */
+    background: #0a0a0a; /* Color de fondo del track */
   }
   
   /* Thumb del scrollbar */
   ::-webkit-scrollbar-thumb {
-    background: #38bdf8; /* Color de fondo del thumb */
+    background: #1d4ed8; /* Color de fondo del thumb */
     border-radius: 4px; /* Bordes redondeados */
   }
   
   /* Hover del thumb */
   ::-webkit-scrollbar-thumb:hover {
-    background: #0f172a; /* Color de fondo al pasar el mouse */
+    background: #15389a; /* Color de fondo al pasar el mouse */
   }
   

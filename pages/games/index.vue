@@ -89,16 +89,16 @@ defineOgImage({
         v-model="searchTest"
         placeholder="Buscar"
         type="text"
-        class="block w-full bg-[#F1F2F4] dark:bg-slate-900 dark:placeholder-zinc-500 text-zinc-300  rounded-md border-gray-300 dark:border-gray-800 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+        class="block w-full bg-[#F1F2F4] dark:bg-neutral-900 dark:placeholder-zinc-500 text-zinc-300  rounded-md border-gray-300 dark:border-neutral-800 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
       >
     </div>
     <div class="flex justify-center items-center space-x-6 m-3.5">
       <button :disabled="pageNumber <= 1" @click="onPreviousPageClick">
-        <Icon name="mdi:code-less-than" size="30" :class="{ 'text-sky-700 dark:text-sky-400': pageNumber > 1 }" />
+        <Icon name="mdi:code-less-than" size="30" :class="{ 'text-sky-700 dark:text-blue-500': pageNumber > 1 }" />
       </button>
       <p>{{ pageNumber }} / {{ totalPage }}</p>
       <button :disabled="pageNumber >= totalPage" @click="onNextPageClick">
-        <Icon name="mdi:code-greater-than" size="30" :class="{ 'text-sky-700 dark:text-sky-400': pageNumber < totalPage }" />
+        <Icon name="mdi:code-greater-than" size="30" :class="{ 'text-sky-700 dark:text-blue-500': pageNumber < totalPage }" />
       </button>
     </div>
     <div v-auto-animate class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 my-5 px-4">
@@ -127,11 +127,11 @@ defineOgImage({
     <ScrollToTop />
     <div class="flex justify-center items-center space-x-6 ">
       <button :disabled="pageNumber <= 1" @click="onPreviousPageClick">
-        <Icon name="mdi:code-less-than" size="30" :class="{ 'text-sky-700 dark:text-sky-400': pageNumber > 1 }" />
+        <Icon name="mdi:code-less-than" size="30" :class="{ 'text-sky-700 dark:text-blue-500': pageNumber > 1 }" />
       </button>
       <p>{{ pageNumber }} / {{ totalPage }}</p>
       <button :disabled="pageNumber >= totalPage" @click="onNextPageClick">
-        <Icon name="mdi:code-greater-than" size="30" :class="{ 'text-sky-700 dark:text-sky-400': pageNumber < totalPage }" />
+        <Icon name="mdi:code-greater-than" size="30" :class="{ 'text-sky-700 dark:text-blue-500': pageNumber < totalPage }" />
       </button>
     </div>
   </main>

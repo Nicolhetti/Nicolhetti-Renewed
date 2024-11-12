@@ -1,5 +1,5 @@
 <template>
-    <button v-if="showScrollToTop" @click="scrollToTop" class="fixed bottom-4 right-4 z-50 p-3 rounded-full bg-sky-700 dark:bg-sky-400 shadow-md hover:bg-sky-800 dark:hover:bg-sky-500 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-75">
+    <button v-if="showScrollToTop" @click="scrollToTop" class="fixed bottom-4 right-4 z-50 p-3 rounded-full bg-blue-800 dark:bg-blue-700 shadow-md hover:bg-blue-900 dark:hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-sky-400 focus:ring-opacity-75">
       <Icon name="mdi:chevron-up" size="30" class="text-white dark:text-gray-900" />
     </button>
 </template>

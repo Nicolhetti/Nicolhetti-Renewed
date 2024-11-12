@@ -29,7 +29,7 @@ withDefaults(defineProps<Props>(), {
 </script>
 
 <template>
-  <article class="group border dark:border-gray-800 m-2 overflow-hidden rounded-2xl shadow-sm text-zinc-700 dark:text-zinc-300 transition-all duration-300 hover:scale-105 hover:shadow-lg transform">
+  <article class="group border dark:border-neutral-800 m-2 overflow-hidden rounded-2xl shadow-sm text-zinc-700 dark:text-zinc-300 transition-all duration-300 hover:scale-105 hover:shadow-lg transform">
     <NuxtLink :to="path">
       <div class="relative overflow-hidden rounded-t-2xl">
         <NuxtImg
@@ -38,16 +38,16 @@ withDefaults(defineProps<Props>(), {
           :src="image"
           :alt="alt"
         />
-        <div class="absolute top-2 right-2 bg-sky-600 text-white text-xs font-semibold px-2 py-1 rounded-md shadow-md">
+        <div class="absolute top-2 right-2 bg-blue-700 text-white text-xs font-semibold px-2 py-1 rounded-md shadow-md">
           {{ update }}
         </div>
-        <div class="absolute bottom-2 left-2 bg-sky-600 text-white text-xs font-semibold px-2 py-1 rounded-md shadow-md">
+        <div class="absolute bottom-2 left-2 bg-blue-700 text-white text-xs font-semibold px-2 py-1 rounded-md shadow-md">
           <p>Release By: {{ release }}</p>
         </div>
         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-500"></div>
       </div>
       <div class="px-3 pb-4">
-        <div class="text-black dark:text-sky-400 pt-3 pb-2">
+        <div class="text-black dark:text-blue-500 pt-3 pb-2">
           <div class="flex items-center">
             <LogoDate />
             {{ date }}
@@ -57,17 +57,17 @@ withDefaults(defineProps<Props>(), {
           <div class="flex items-center gap-1 flex-wrap">
             <LogoTag />
             <template v-for="tag in tags" :key="tag">
-              <span class="bg-gray-200 dark:bg-slate-900 rounded-md px-2 py-1 font-semibold">{{ tag }}</span>
+              <span class="bg-gray-200 dark:bg-neutral-900 rounded-md px-2 py-1 font-semibold">{{ tag }}</span>
             </template>
           </div>
         </div>
-        <h2 class="text-xl font-semibold text-black dark:text-zinc-300 pb-1 group-hover:text-sky-700 dark:group-hover:text-sky-400 transition-colors duration-300">
+        <h2 class="text-xl font-semibold text-black dark:text-zinc-300 pb-1 group-hover:text-sky-700 dark:group-hover:text-blue-500 transition-colors duration-300">
           {{ title }}
         </h2>
         <p class="text-ellipsis line-clamp-4 text-base">
           {{ description }}
         </p>
-        <div class="flex group-hover:underline text-sky-700 dark:text-sky-400 items-center py-2 transition-colors duration-300">
+        <div class="flex group-hover:underline text-sky-700 dark:text-blue-500 items-center py-2 transition-colors duration-300">
           <p>Leer más</p>
           <LogoArrow />
         </div>
