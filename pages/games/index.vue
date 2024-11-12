@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-const { data } = await useAsyncData('home', () => queryContent('/games').sort({ _id: -1 }).find())
+const { data } = await useAsyncData('home', () => queryContent('/games').sort({ title: 1 }).find())
 
 const elementPerPage = ref(14)
 const pageNumber = ref(1)
@@ -14,10 +14,11 @@ const formattedData = computed(() => {
       image: articles.image || '/not-found.jpg',
       alt: articles.alt || 'no alter data available',
       ogImage: articles.ogImage || '/not-found.jpg',
-      date: articles.date || 'not-date-available',
+      date: articles.date ? new Date(articles.date).toLocaleDateString('es-AR', {timeZone: 'UTC', day: 'numeric', month: 'long', year: 'numeric' }) : 'not-date-available',
       tags: articles.tags || [],
       published: articles.published || false,
       update: articles.update || 'no-update',
+      release: articles.release || 'n/a'
     }
   }) || []
 })
@@ -113,6 +114,7 @@ defineOgImage({
           :tags="post.tags"
           :published="post.published"
           :update="post.update"
+          :release="post.release"
         />
       </template>
 

@@ -20,6 +20,7 @@ const data = computed<BlogPost>(() => {
     tags: articles.value?.tags || [],
     published: articles.value?.published || false,
     update: articles.value?.update || 'no-update',
+    release: articles.value?.release || 'n/a'
   }
 })
 
@@ -123,6 +124,7 @@ onMounted(() => {
         :description="data.description"
         :tags="data.tags"
         :update="data.update"
+        :release="data.release"
       />
       <div
         class="prose prose-pre:max-w-xs sm:prose-pre:max-w-full prose-sm sm:prose-base md:prose-lg

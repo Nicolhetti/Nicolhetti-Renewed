@@ -10,6 +10,7 @@ interface Props {
   tags?: Array<string>
   published?: boolean
   update?: string
+  release?: string
 }
 
 withDefaults(defineProps<Props>(), {
@@ -23,6 +24,7 @@ withDefaults(defineProps<Props>(), {
   tags: () => [],
   published: false,
   update: 'no-update',
+  release: 'n/a'
 })
 </script>
 
@@ -36,6 +38,9 @@ withDefaults(defineProps<Props>(), {
           :src="image"
           :alt="alt"
         />
+        <div class="absolute bottom-2 left-2 bg-sky-600 text-white text-xs font-semibold px-2 py-1 rounded-md shadow-md">
+          <p>Release By: {{ release }}</p>
+        </div>
         <div class="absolute top-2 right-2 bg-sky-600 text-white text-xs font-semibold px-2 py-1 rounded-md shadow-md">
           {{ update }}
         </div>

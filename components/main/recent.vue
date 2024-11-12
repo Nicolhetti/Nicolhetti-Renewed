@@ -1,7 +1,18 @@
 <script lang="ts" setup>
-// Get Last 6 Publish Post from the content/blog directory
-const { data } = await useAsyncData('recent-post', () =>
-  queryContent('/games').limit(6).sort({ _id: -1 }).find(),
+// Get Last 6 Published Posts from the content/blog directory
+const { data } = await useAsyncData(
+  'recent-post',
+  async () => {
+    const posts = await queryContent('/games')
+      .where({ published: true })
+      .find()
+    
+    return posts
+      .filter(post => post.date)
+      .map(post => ({ ...post, date: new Date(post.date) }))
+      .sort((a, b) => b.date - a.date)
+      .slice(0, 6)
+  }
 )
 
 const formattedData = computed(() => {
@@ -13,10 +24,11 @@ const formattedData = computed(() => {
       image: articles.image || '/not-found.jpg',
       alt: articles.alt || 'no alter data available',
       ogImage: articles.ogImage || '/not-found.jpg',
-      date: articles.date || 'not-date-available',
+      date: articles.date ? articles.date.toLocaleDateString('es-AR', {timeZone: 'UTC', day: 'numeric', month: 'long', year: 'numeric' }) : 'not-date-available',
       tags: articles.tags || [],
       published: articles.published || false,
       update: articles.update || 'no-update',
+      release: articles.release || 'n/a'
     }
   })
 })
@@ -36,8 +48,8 @@ useHead({
 <template>
   <div class="pb-10 px-4">
     <div class="flex flex-row items-center space-x-3 pt-5 pb-3">
-      <Icon name="mdi:star-three-points-outline" size="2em" class="text-black dark:text-zinc-300  " />
-      <h2 class="text-4xl font-semibold text-black dark:text-zinc-300   ">
+      <Icon name="mdi:star-three-points-outline" size="2em" class="text-black dark:text-zinc-300" />
+      <h2 class="text-4xl font-semibold text-black dark:text-zinc-300">
         Publicaciones recientes
       </h2>
     </div>
@@ -55,6 +67,7 @@ useHead({
           :tags="post.tags"
           :published="post.published"
           :update="post.update"
+          :release="post.release"
         />
       </template>
       <template v-if="data?.length === 0">

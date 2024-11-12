@@ -8,6 +8,7 @@ export interface BlogPost {
   tags: string[]
   published: boolean
   update: string
+  release: string
 }
 
 declare global {

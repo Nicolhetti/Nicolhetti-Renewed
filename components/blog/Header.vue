@@ -6,6 +6,7 @@ interface Props {
   description: string
   date: string
   tags: Array<string>
+  release: string
 }
 
 withDefaults(defineProps<Props>(), {

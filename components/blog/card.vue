@@ -10,6 +10,7 @@ interface Props {
   tags: Array<string>
   published: boolean
   update: string
+  release: string
 }
 
 withDefaults(defineProps<Props>(), {
@@ -22,7 +23,8 @@ withDefaults(defineProps<Props>(), {
   ogImage: '/blogs-img/blog.jpg',
   tags: () => [],
   published: false,
-  update: 'no-update'
+  update: 'no-update',
+  release: 'n/a'
 })
 </script>
 
@@ -38,6 +40,9 @@ withDefaults(defineProps<Props>(), {
         />
         <div class="absolute top-2 right-2 bg-sky-600 text-white text-xs font-semibold px-2 py-1 rounded-md shadow-md">
           {{ update }}
+        </div>
+        <div class="absolute bottom-2 left-2 bg-sky-600 text-white text-xs font-semibold px-2 py-1 rounded-md shadow-md">
+          <p>Release By: {{ release }}</p>
         </div>
         <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-500"></div>
       </div>

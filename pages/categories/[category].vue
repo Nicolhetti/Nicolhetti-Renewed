@@ -27,10 +27,11 @@ const formattedData = computed(() => {
       image: articles.image || '/blogs-img/blog.jpg',
       alt: articles.alt || 'no alter data available',
       ogImage: articles.ogImage || '/blogs-img/blog.jpg',
-      date: articles.date || 'not-date-available',
+      date: articles.date ? new Date(articles.date).toLocaleDateString('es-AR', {timeZone: 'UTC', day: 'numeric', month: 'long', year: 'numeric' }) : 'not-date-available',
       tags: articles.tags || [],
       published: articles.published || false,
       update: articles.update || 'no-update',
+      release: articles.release || 'n/a',
     }
   })
 })
@@ -73,6 +74,7 @@ defineOgImage({
         :tags="post.tags"
         :published="post.published"
         :update="post.update"
+        :release="post.release"
       />
       <BlogEmpty v-if="data?.length === 0" />
     </div>
