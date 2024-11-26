@@ -33,7 +33,7 @@ withDefaults(defineProps<Props>(), {
     <NuxtLink :to="path" class="grid grid-cols-1 sm:grid-cols-10 gap-1">
       <div class="relative sm:col-span-3 overflow-hidden rounded-t-2xl sm:rounded-l-2xl sm:rounded-t-none">
         <NuxtImg
-          class="h-80 w-full object-fill object-center transition-transform duration-500 group-hover:scale-110"
+          class="h-80 w-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
           width="300"
           :src="image"
           :alt="alt"
