@@ -30,10 +30,10 @@ withDefaults(defineProps<Props>(), {
 
 <template>
   <article class="group border dark:border-neutral-800 m-2 rounded-2xl overflow-hidden shadow-sm text-zinc-700 dark:text-zinc-300 transition-all duration-300 hover:scale-105 hover:shadow-lg transform">
-    <NuxtLink :to="path" class="grid grid-cols-1 sm:grid-cols-10 gap-1">
-      <div class="relative sm:col-span-3 overflow-hidden rounded-t-2xl sm:rounded-l-2xl sm:rounded-t-none">
+    <NuxtLink :to="path" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      <div class="relative sm:col-span-3 overflow-hidden rounded-b-2xl">
         <NuxtImg
-          class="h-80 w-full object-cover object-center transition-transform duration-500 group-hover:scale-110"
+          class="h-96 w-full object-fill object-center transition-transform duration-500 group-hover:scale-110"
           width="300"
           :src="image"
           :alt="alt"

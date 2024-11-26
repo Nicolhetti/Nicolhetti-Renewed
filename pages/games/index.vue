@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 const { data } = await useAsyncData('home', () => queryContent('/games').sort({ title: 1 }).find())
 
-const elementPerPage = ref(14)
+const elementPerPage = ref(15)
 const pageNumber = ref(1)
 const searchTest = ref('')
 
@@ -81,7 +81,7 @@ defineOgImage({
 </script>
 
 <template>
-  <main class="container max-w-8xl mx-auto text-zinc-600">
+  <main class="container max-w-5xl mx-auto text-zinc-600">
     <ArchiveHero />
 
     <div class="px-6">
@@ -101,7 +101,7 @@ defineOgImage({
         <Icon name="mdi:code-greater-than" size="30" :class="{ 'text-sky-700 dark:text-blue-500': pageNumber < totalPage }" />
       </button>
     </div>
-    <div v-auto-animate class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 gap-6 my-5 px-4">
+    <div v-auto-animate class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-5 px-4">
       <template v-for="post in paginatedData" :key="post.title">
         <ArchiveCard
           :path="post.path"
