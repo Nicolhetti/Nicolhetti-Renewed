@@ -20,7 +20,8 @@ const data = computed<BlogPost>(() => {
     tags: articles.value?.tags || [],
     published: articles.value?.published || false,
     update: articles.value?.update || 'no-update',
-    release: articles.value?.release || 'n/a'
+    release: articles.value?.release || 'n/a',
+    downloadLinks: articles.value?.downloadLinks || []
   }
 })
 
@@ -137,7 +138,21 @@ onMounted(() => {
         </ContentRenderer>
       </div>
 
-
+      <!-- Download Links -->
+      <div v-if="data.downloadLinks.length > 0" class="mt-6 flex flex-col items-center space-y-4">
+        <div v-for="(link, index) in data.downloadLinks" :key="index">
+          <a
+            :href="link.url"
+            :style="{ backgroundColor: link.buttonColor || '#007BFF' }"
+            class="inline-block px-6 py-3 text-lg font-semibold text-white rounded-lg shadow-lg transition transform hover:scale-105"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {{ link.name }}
+          </a>
+        </div>
+      </div>
+      
       <!-- Agrega Disqus acá -->
       <div id="disqus_thread" class="mt-10"></div>
     </div>

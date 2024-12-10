@@ -9,6 +9,11 @@ export interface BlogPost {
   published: boolean
   update: string
   release: string
+  downloadLinks: { 
+    name: string; 
+    url: string; 
+    buttonColor?: string;
+  }[]
 }
 
 declare global {
