@@ -6,8 +6,7 @@ const { path } = useRoute()
 
 const { data: articles, error } = await useAsyncData(`blog-post-${path}`, () => queryContent(path).findOne())
 
-if (error.value)
-  navigateTo('/404')
+if (error.value) navigateTo('/404')
 
 const data = computed<BlogPost>(() => {
   return {
@@ -24,6 +23,12 @@ const data = computed<BlogPost>(() => {
     downloadLinks: articles.value?.downloadLinks || []
   }
 })
+
+const disqusEnabled = computed(() => {
+  return data.value.published
+})
+
+const disqusShortname = 'nicolhetti-projects'
 
 useHead({
   title: data.value.title || '',
@@ -89,29 +94,6 @@ defineOgImageComponent('Test', {
 
 })
 
-import { onMounted } from 'vue'
-
-const disqusShortname = 'nicolhetti-projects';
-
-onMounted(() => {
-  if (window.DISQUS) {
-    // Si Disqus ya está cargado, solo actualiza
-    window.DISQUS.reset({
-      reload: true,
-      config: function () {
-        this.page.url = window.location.href;
-        this.page.identifier = window.location.pathname;
-      },
-    });
-  } else {
-    // Si Disqus no está cargado, añade el script
-    const d = document, s = d.createElement('script');
-    s.src = `https://${disqusShortname}.disqus.com/embed.js`;
-    s.setAttribute('data-timestamp', (+new Date()).toString());
-    (d.head || d.body).appendChild(s);
-  }
-});
-
 </script>
 
 <template>
@@ -128,8 +110,7 @@ onMounted(() => {
         :release="data.release"
       />
       <div
-        class="prose prose-pre:max-w-xs sm:prose-pre:max-w-full prose-sm sm:prose-base md:prose-lg
-        prose-h1:no-underline max-w-5xl mx-auto prose-zinc dark:prose-invert prose-img:rounded-lg"
+        class="prose prose-pre:max-w-xs sm:prose-pre:max-w-full prose-sm sm:prose-base md:prose-lg prose-h1:no-underline max-w-5xl mx-auto prose-zinc dark:prose-invert prose-img:rounded-lg"
       >
         <ContentRenderer v-if="articles" :value="articles">
           <template #empty>
@@ -152,9 +133,10 @@ onMounted(() => {
           </a>
         </div>
       </div>
-      
-      <!-- Agrega Disqus acá -->
-      <div id="disqus_thread" class="mt-10"></div>
+    <!-- Componente de Disqus para comentarios -->
+    <div class="border mt-8 p-4 dark:bg-neutral-900 dark:border-neutral-800 bg-blue-100 border-blue-200 rounded-lg shadow-lg">
+        <OtherDisqus v-if="disqusEnabled" :disqusEnabled="disqusEnabled" :shortname="disqusShortname" />
+    </div>
     </div>
     <BlogToc />
     <ScrollToTop />

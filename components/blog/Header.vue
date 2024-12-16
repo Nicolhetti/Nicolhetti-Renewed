@@ -7,6 +7,7 @@ interface Props {
   date: string
   tags: Array<string>
   release: string
+  update: string
 }
 
 withDefaults(defineProps<Props>(), {
@@ -16,6 +17,8 @@ withDefaults(defineProps<Props>(), {
   description: 'no description',
   date: 'no-date',
   tags: () => ([]),
+  release: 'n/a',
+  update: 'n/a'
 })
 </script>
 

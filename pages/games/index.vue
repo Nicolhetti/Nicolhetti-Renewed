@@ -118,11 +118,7 @@ defineOgImage({
         />
       </template>
 
-      <ArchiveCard
-        v-if="paginatedData.length <= 0"
-        title="No se encontró ninguna publicación"
-        image="/not-found.jpg"
-      />
+      <ArchiveCard v-if="paginatedData.length <= 0" title="No se encontró ninguna publicación" image="/not-found.jpg" />
     </div>
     <ScrollToTop />
     <div class="flex justify-center items-center space-x-6 ">

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-// Get Last 6 Publish Post from the content/blog directory
+// Get Last 9 Publish Post from the content/blog directory
 const { data } = await useAsyncData('trending-post', () =>
-  queryContent('/games').limit(6).sort({ date: 1 }).find(),
+  queryContent('/games').limit(9).sort({ date: 1 }).find(),
 )
 
 const formattedData = computed(() => {

@@ -1,10 +1,8 @@
 # Nuxt dev/build outputs
 .output
 .nuxt
+.data
 # Node dependencies
 node_modules
 # System files
 *.log
-# lock
-package-lock.json
-yarn.lock

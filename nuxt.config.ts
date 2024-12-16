@@ -2,6 +2,28 @@ import { navbarData, seoData } from './data'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: '2024-09-30',
+
+  modules: [
+    'nuxt-icon',
+    '@nuxt/image',
+    '@nuxt/fonts',
+    '@nuxt/eslint',
+    '@vueuse/nuxt',
+    '@nuxt/content',
+    'nuxt-og-image',
+    '@nuxtjs/robots',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/tailwindcss',
+    '@formkit/auto-animate',
+    '@stefanobartoletti/nuxt-social-share'
+  ],
+
+  buildModules: [
+    'vue-disqus',
+  ],
+
   app: {
     head: {
       charset: 'utf-16',
@@ -22,7 +44,6 @@ export default defineNuxtConfig({
     identity: {
       type: 'Person',
     },
-    name: 'Nicolhetti Projects',
     twitter: seoData.twitterHandle,
   },
 
@@ -33,10 +54,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: [
-        '/',
-        '/rss.xml',
-      ],
+      routes: ['/', '/rss.xml'],
     },
   },
 
@@ -46,35 +64,9 @@ export default defineNuxtConfig({
     fallback: 'light',
   },
 
-  modules: [
-    'nuxt-icon',
-    '@nuxt/image',
-    '@vueuse/nuxt',
-    'nuxt-og-image',
-    '@nuxt/content',
-    '@nuxtjs/robots',
-    '@nuxtjs/sitemap',
-    '@nuxtjs/fontaine',
-    '@nuxtjs/color-mode',
-    '@nuxtjs/tailwindcss',
-    '@formkit/auto-animate',
-    '@stefanobartoletti/nuxt-social-share',
-    'nuxt-disqus',
-  ],
-
-  disqus: {
-    shortname: "nicolhetti-projects",
-  },
-
   content: {
     highlight: {
       theme: 'dracula',
     },
   },
-
-  css: [
-    '@/assets/css/scrollbar.css'
-  ],
-
-  compatibilityDate: '2024-09-30',
 })

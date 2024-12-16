@@ -1,6 +1,6 @@
 {
   "name": "@nurriyad/nuxt-blog",
-  "version": "1.5.0",
+  "version": "1.7.0",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -10,15 +10,17 @@
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --check ./",
+    "format:fix": "prettier --write ./"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^0.42.0",
     "@formkit/auto-animate": "^0.8.2",
     "@nuxt/content": "^2.12.1",
+    "@nuxt/eslint": "^0.6.1",
+    "@nuxt/fonts": "^0.10.2",
     "@nuxt/image": "^1.8.0",
     "@nuxtjs/color-mode": "^3.3.2",
-    "@nuxtjs/fontaine": "^0.4.1",
     "@nuxtjs/robots": "^4.1.7",
     "@nuxtjs/sitemap": "^5.3.2",
     "@nuxtjs/tailwindcss": "^6.11.4",
@@ -27,13 +29,16 @@
     "@tailwindcss/typography": "^0.5.10",
     "@vueuse/core": "^10.9.0",
     "@vueuse/nuxt": "^10.9.0",
-    "eslint": "^8.39.0",
+    "eslint-config-prettier": "^9.1.0",
     "feed": "^4.2.2",
-    "nuxt": "^3.13.2",
-    "nuxt-disqus": "^1.1.1",
+    "nuxt": "^3.14.159",
     "nuxt-icon": "^0.6.8",
     "nuxt-og-image": "^3.0.0-rc.38",
-    "typescript": "^5.3.3",
-    "vuetify-nuxt-module": "^0.18.3"
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.3"
+  },
+  "packageManager": "pnpm@9.1.1+sha256.9551e803dcb7a1839fdf5416153a844060c7bce013218ce823410532504ac10b",
+  "dependencies": {
+    "vue-disqus": "^4.0.1"
   }
 }

@@ -15,9 +15,3 @@ export interface BlogPost {
     buttonColor?: string;
   }[]
 }
-
-declare global {
-  interface Window {
-    DISQUS?: any;
-  }
-}

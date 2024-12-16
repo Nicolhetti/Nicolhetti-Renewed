@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-// Get Last 6 Published Posts from the content/blog directory
+// Get Last 9 Published Posts from the content/blog directory
 const { data } = await useAsyncData(
   'recent-post',
   async () => {
@@ -11,7 +11,7 @@ const { data } = await useAsyncData(
       .filter(post => post.date)
       .map(post => ({ ...post, date: new Date(post.date) }))
       .sort((a, b) => b.date - a.date)
-      .slice(0, 6)
+      .slice(0, 9)
   }
 )
 

@@ -4,7 +4,7 @@ import { footerData } from '~/data'
 
 <template>
   <div>
-    <p class="text-black dark:text-zinc-300   text-base py-1 font-semibold">
+    <p class="text-black dark:text-zinc-300 text-base py-1 font-semibold">
       Sobre este Sitio
     </p>
     <p class="py-2 dark:text-zinc-300 ">

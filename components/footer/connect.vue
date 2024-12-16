@@ -4,17 +4,14 @@ import { footerData, seoData } from '~/data'
 
 <template>
   <div>
-    <p class="text-black dark:text-zinc-300   text-base font-semibold">
+    <p class="text-black dark:text-zinc-300 text-base font-semibold">
       Contacto
     </p>
-    <p class="dark:text-zinc-300  ">
+    <p class="dark:text-zinc-300">
       {{ footerData.authorInterest }}
     </p>
 
-    <a
-      :href="`mailto: ${seoData.mailAddress}`"
-      class="block text-center w-full bg-blue-700 p-2 rounded-lg text-[#F1F2F4]  mt-3 text-sm"
-    >
+    <a :href="`mailto: ${seoData.mailAddress}`" class="block text-center w-full bg-blue-700 p-2 rounded-lg text-[#F1F2F4] mt-3 text-sm" >
       Enviar Mail
     </a>
   </div>

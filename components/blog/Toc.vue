@@ -6,8 +6,8 @@ const links = articles?.body?.toc?.links || []
 </script>
 
 <template>
-  <div class="lg:col-span-3 sticky top-28 h-96  hidden lg:block  justify-self-end">
-    <div class="border dark:border-neutral-800 p-3 rounded-md min-w-[200px] dark:bg-neutral-900">
+  <div class="lg:col-span-3 sticky top-28 h-96 hidden lg:block justify-self-end">
+    <div class="border dark:border-neutral-800 p-3 bg-blue-100 border-blue-200 rounded-md min-w-[200px] dark:bg-neutral-900">
       <h1 class="text-sm font-bold mb-3 border-b dark:border-neutral-800 pb-2">
         Tabla de contenido
       </h1>

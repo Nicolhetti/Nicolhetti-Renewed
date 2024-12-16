@@ -10,7 +10,7 @@ useHead({
 </script>
 
 <template>
-  <div class="bg-[#F1F2F4] dark:text-zinc-300   dark:bg-neutral-950">
+  <div class="bg-[#F1F2F4] dark:text-zinc-300 dark:bg-neutral-950">
     <NuxtLoadingIndicator />
     <NuxtLayout>
       <NuxtPage />
@@ -41,7 +41,7 @@ useHead({
 body {
   font-family: 'Poppins', sans-serif;
 };
-html.dark{
+html.dark {
   color-scheme: dark;
 }
 </style>
