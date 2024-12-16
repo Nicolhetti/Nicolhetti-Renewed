@@ -38,9 +38,7 @@ useHead({
   opacity: 0;
   filter: blur(1rem);
 }
-body {
-  font-family: 'Poppins', sans-serif;
-};
+
 html.dark {
   color-scheme: dark;
 }
